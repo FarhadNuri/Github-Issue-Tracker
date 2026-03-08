@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:opsz,wght@14..32,500&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <title>Github Issue Tracker</title>
+
+    <style>
+        * {
+            font-family: 'Geist', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <img src="logo.png" alt="">
+        <h1>Github Issue Tracker</h1>
+        <p>Sign in to manage your issues.</p>
+    </section>
+    <section>
+        <label for="username">Username</label>
+        <br>
+        <input type="text" id="username" name="username">
+        <br>
+        <caption>Default: admin</caption>
+        <br>
+        <label for="password">Password</label>
+        <br>
+        <input type="password" id="password" name="password">
+        <br>
+        <caption>Default: admin123</caption>
+        <br>
+        <button onclick="window.location.href='dashboard.html'">Sign In</button>
+    </section>
+    <section>
+        <h3>Demo Credentials</h3>
+        <p>Username: admin</p>
+        <p>Password: admin123</p>
+    </section>
+</body>
+
+</html>
