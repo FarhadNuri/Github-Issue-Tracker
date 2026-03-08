@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,18 +19,40 @@
     </style>
 </head>
 
-<body>
-    <nav className="">
-        <div class="left">
-            <img src="logo.png" alt="">
-            <h3>Github Issue Tracker</h3>
+<body class="bg-gray-100 min-h-screen">
+
+    <nav class="bg-white border-b border-gray-200 px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-around gap-3">
+
+        <div class="flex items-center gap-3">
+            <img src="logo.png" alt="GitHub Logo" class="w-9 h-9">
+            <span class="font-semibold text-lg">GitHub Issues Tracker</span>
         </div>
-        <div class="right">
-            <search>
-                <input type="text" placeholder="Search issues...">
-            </search>
-            <button>New Issue</button>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <div class="flex items-center border border-gray-300 rounded px-4 py-2 bg-white w-full sm:w-64 ">
+                <img src="search.png" alt="search" class="w-5 h-5 mr-2 opacity-50">
+                <input type="text" placeholder="Search issues..."
+                    class="text-gray-700 placeholder-gray-400 focus:outline-none w-full">
+            </div>
+            <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded cursor-pointer w-full sm:w-auto">
+                + New Issue
+            </button>
         </div>
     </nav>
+
+    <div class="flex justify-center mt-8 px-4">
+
+        <div class="bg-white  rounded-lg p-6 w-full max-w-5xl">
+
+            <div class="flex items-center gap-3">
+                <button class="bg-indigo-600 text-white font-semibold px-6 py-2 rounded cursor-pointer">All</button>
+                <button class="bg-white text-gray-700 font-medium px-6 py-2 border border-gray-300 rounded hover:bg-gray-50 cursor-pointer">Open</button>
+                <button class="bg-white text-gray-700 font-medium px-6 py-2 border border-gray-300 rounded hover:bg-gray-50 cursor-pointer">Closed</button>
+            </div>
+
+        </div>
+    </div>
+
 </body>
+
 </html>
