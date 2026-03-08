@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,6 @@
         href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:opsz,wght@14..32,500&family=Manrope:wght@200..800&display=swap"
         rel="stylesheet">
     <title>Github Issue Tracker</title>
-
     <style>
         * {
             font-family: 'Geist', sans-serif;
@@ -20,32 +18,52 @@
     </style>
 </head>
 
-<body>
-    <section>
-        <img src="logo.png" alt="">
-        <h1>Github Issue Tracker</h1>
-        <p>Sign in to manage your issues.</p>
-    </section>
-    <section>
-        <label for="username">Username</label>
-        <br>
-        <input type="text" id="username" name="username">
-        <br>
-        <caption>Default: admin</caption>
-        <br>
-        <label for="password">Password</label>
-        <br>
-        <input type="password" id="password" name="password">
-        <br>
-        <caption>Default: admin123</caption>
-        <br>
-        <button onclick="window.location.href='dashboard.html'">Sign In</button>
-    </section>
-    <section>
-        <h3>Demo Credentials</h3>
-        <p>Username: admin</p>
-        <p>Password: admin123</p>
-    </section>
+<body class="bg-gray-100 min-h-screen">
+    <div class="flex items-center justify-center min-h-screen -mt-10">
+        <div class="bg-white rounded-lg p-8 w-full max-w-sm">
+            <div class="flex flex-col items-center mb-6">
+                <img src="logo.png" alt="GitHub Logo" class="w-16 h-16 mb-3">
+                <h1 class="text-xl font-semibold text-gray-900">GitHub Issues Tracker</h1>
+                <p class="text-gray-500 text-sm mt-1">Sign in to manage your issues</p>
+            </div>
+            <div class="flex flex-col gap-4">
+
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-800 mb-1">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter Username"
+                        class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-blue-400">
+                    <p class="text-blue-500 text-xs mt-1 font-semibold">Default: admin</p>
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-800 mb-1">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password"
+                        class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-blue-400">
+                    <p class="text-blue-500 text-xs mt-1 font-semibold">Default: admin123</p>
+                </div>
+
+                <button onclick="window.location.href='dashboard.html'"
+                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded mt-1 cursor-pointer">
+                    Sign In
+                </button>
+
+            </div>
+
+            <div class="flex items-center my-5">
+                <div class="flex-1 h-px bg-gray-200"></div>
+                <span class="mx-3 text-gray-400 text-sm">OR</span>
+                <div class="flex-1 h-px bg-gray-200"></div>
+            </div>
+
+            <p class="text-center text-sm text-gray-500 mb-2">Demo Credentials:</p>
+            <div class="bg-gray-100 rounded p-3 text-sm text-gray-700 text-center">
+                <p><span class="font-semibold">Username:</span> admin</p>
+                <p><span class="font-semibold">Password:</span> admin123</p>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 
 </html>
