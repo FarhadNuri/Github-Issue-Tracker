@@ -19,7 +19,10 @@ searchInput.addEventListener("input", function () {
 
 async function searchIssues(searchText) {
   let grid = document.getElementById("issues-grid");
-  grid.innerHTML = '<p class="text-gray-400 text-center col-span-4 py-10">Searching...</p>';
+  let spinner = document.getElementById("loading-spinner");
+
+  grid.innerHTML = "";
+  spinner.classList.remove("hidden");
 
   try {
     let response = await fetch(
@@ -29,10 +32,12 @@ async function searchIssues(searchText) {
 
     let results = data.data;
 
+    spinner.classList.add("hidden");
     document.getElementById("issue-count").textContent = results.length;
     renderIssues(results);
 
   } catch (error) {
+    spinner.classList.add("hidden");
     grid.innerHTML = '<p class="text-red-400 text-center col-span-4 py-10">Search failed. Please try again.</p>';
     console.log("Error searching issues:", error);
   }

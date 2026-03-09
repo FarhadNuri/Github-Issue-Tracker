@@ -29,7 +29,12 @@ async function openModal(issueId) {
   overlay.classList.remove("hidden");
 
   let modalBody = document.getElementById("modal-body");
-  modalBody.innerHTML = '<p class="text-gray-400 text-center py-10">Loading...</p>';
+
+  modalBody.innerHTML = `
+    <div class="flex justify-center py-10">
+      <div class="w-10 h-10 border-4 border-gray-200 border-t-indigo-600 rounded-full animate-spin"></div>
+    </div>
+  `;
 
   try {
     let response = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issue/" + issueId);
