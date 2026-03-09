@@ -62,7 +62,7 @@ function createCard(issue) {
   }
 
   let card = `
-                <div class="bg-white rounded-lg p-4 border-t-4 ${borderColor} shadow-sm">
+                <div onclick="openModal(${issue.id})" class="bg-white rounded-lg p-4 border-t-4 ${borderColor} shadow-sm cursor-pointer hover:shadow-md">
                     <div class="flex items-center justify-between mb-3">
                         ${icon}
                         ${getPriorityBadge(issue.priority)}
