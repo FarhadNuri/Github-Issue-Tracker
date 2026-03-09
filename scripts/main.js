@@ -18,11 +18,11 @@ function getPriorityBadge(priority) {
 
 function getLabelPill(label) {
   if (label === "bug") {
-    return '<span class="bg-red-100 text-red-500 text-xs px-2 py-0.5 rounded-full flex items-center gap-1 w-fit"><img src="bug.png" class="w-3 h-3"> BUG</span>';
+    return '<span class="bg-red-100 text-red-500 text-xs px-2 py-0.5 rounded-full flex items-center gap-1 w-fit"><img src="images/bug.png" class="w-3 h-3"> BUG</span>';
   } else if (label === "help wanted") {
-    return '<span class="bg-orange-100 text-orange-500 text-xs px-2 py-0.5 rounded-full flex items-center gap-1 w-fit"><img src="help.png" class="w-3 h-3"> HELP WANTED</span>';
+    return '<span class="bg-orange-100 text-orange-500 text-xs px-2 py-0.5 rounded-full flex items-center gap-1 w-fit"><img src="images/help.png" class="w-3 h-3"> HELP WANTED</span>';
   } else if (label === "enhancement") {
-    return '<span class="bg-green-100 text-green-600 text-xs px-2 py-0.5 rounded-full flex items-center gap-1 w-fit"><img src="enhance.png" class="w-3 h-3"> ENHANCEMENT</span>';
+    return '<span class="bg-green-100 text-green-600 text-xs px-2 py-0.5 rounded-full flex items-center gap-1 w-fit"><img src="images/enhance.png" class="w-3 h-3"> ENHANCEMENT</span>';
   } else if (label === "documentation") {
     return '<span class="bg-blue-100 text-blue-500 text-xs px-2 py-0.5 rounded-full">📝 DOCUMENTATION</span>';
   } else if (label === "good first issue") {
@@ -46,9 +46,9 @@ function createCard(issue) {
 
   let icon = "";
   if (issue.status === "open") {
-    icon = '<img src="loading.png" alt="open" class="w-6 h-6">';
+    icon = '<img src="images/loading.png" alt="open" class="w-6 h-6">';
   } else {
-    icon = '<img src="tick.png" alt="closed" class="w-6 h-6">';
+    icon = '<img src="images/tick.png" alt="closed" class="w-6 h-6">';
   }
 
   let labelsHTML = "";

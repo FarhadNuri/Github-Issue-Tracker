@@ -19,10 +19,10 @@
 </head>
 
 <body class="bg-gray-100 min-h-screen">
-    <div class="flex items-center justify-center min-h-screen -mt-10">
+    <div class="flex items-center justify-center min-h-screen">
         <div class="bg-white rounded-lg p-8 w-full max-w-sm">
             <div class="flex flex-col items-center mb-6">
-                <img src="logo.png" alt="GitHub Logo" class="w-16 h-16 mb-3">
+                <img src="images/logo.png" alt="GitHub Logo" class="w-16 h-16 mb-3">
                 <h1 class="text-xl font-semibold text-gray-900">GitHub Issues Tracker</h1>
                 <p class="text-gray-500 text-sm mt-1">Sign in to manage your issues</p>
             </div>
@@ -42,10 +42,13 @@
                     <p class="text-blue-500 text-xs mt-1 font-semibold">Default: admin123</p>
                 </div>
 
-                <button onclick="window.location.href='dashboard.html'"
+                <button onclick="signIn()"
                     class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded mt-1 cursor-pointer">
                     Sign In
                 </button>
+
+                <!-- Error message (hidden by default) -->
+                <p id="error-msg" class="hidden text-red-500 text-sm text-center">Incorrect username or password.</p>
 
             </div>
 
@@ -65,5 +68,7 @@
     </div>
 
 </body>
+
+<script src="scripts/login.js"></script>
 
 </html>
