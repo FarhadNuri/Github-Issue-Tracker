@@ -95,6 +95,39 @@ function renderIssues(issues) {
   }
 }
 
+function filterAndRender(filter) {
+  currentFilter = filter;
+
+  let filtered = [];
+
+  if (filter === "all") {
+    filtered = allIssues;
+  } else {
+    for (let i = 0; i < allIssues.length; i++) {
+      if (allIssues[i].status === filter) {
+        filtered.push(allIssues[i]);
+      }
+    }
+  }
+
+  document.getElementById("issue-count").textContent = filtered.length;
+  renderIssues(filtered);
+}
+
+let tabButtons = document.querySelectorAll(".tab-btn");
+
+tabButtons.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    tabButtons.forEach(function (b) {
+      b.classList.remove("bg-indigo-600", "text-white", "font-semibold");
+      b.classList.add("bg-white", "text-gray-700", "border", "border-gray-300", "font-medium");
+    });
+    btn.classList.add("bg-indigo-600", "text-white", "font-semibold");
+    btn.classList.remove("bg-white", "text-gray-700", "border", "border-gray-300", "font-medium");
+
+    filterAndRender(btn.dataset.filter);
+  });
+});
 
 
 async function fetchIssues() {
